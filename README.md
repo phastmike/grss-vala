@@ -20,3 +20,9 @@ For some reason i did not dig in detail, the VAPI file references libxml2 xmlDoc
 ## Last but not least
 The VAPI file should be copied into valac VAPI folder and use the -X switch to indicate the library.
 C code works ok with pkg-config and valac can generate C code that will compile but to compile directly from valac, we must use '-X -lgrss' (this can be solved, probably, but needs more time)
+
+### References:
+[libgrss at github](https://github.com/GNOME/libgrss)  
+[libgrss at GNOME](https://wiki.gnome.org/Projects/Libgrss)  
+[Online API reference](http://gtk.mplat.es/libgrss/documentation/0.6/)  
+
