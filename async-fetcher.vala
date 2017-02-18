@@ -25,7 +25,7 @@ public class DemoRss : GLib.Object {
     public static int main (string[] args) {
         GLib.MainLoop loop;
         var demo = new DemoRss ();
-        loop = new MainLoop ();
+        var loop = new GLib.MainLoop ();
         var feed = new Grss.FeedChannel.with_source ("http://rss.slashdot.org/Slashdot/slashdot");
         demo.get_titles (feed);
         loop.run ();

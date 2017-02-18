@@ -1,5 +1,5 @@
 # Using LibGRss on Vala
-LibGRSS or libgrss is a 'library for easy management of RSS/Atom/Pie feeds.' (from [wiki.gnome.org](https://wiki.gnome.org/Projects/Libgrss)).
+LibGRss or libgrss is a 'library for easy management of RSS/Atom/Pie feeds.' (from [wiki.gnome.org](https://wiki.gnome.org/Projects/Libgrss)).
 
 I wanted to use this glib library on Vala but there is/was no VAPI file and no reference on Valadoc. 
 
@@ -10,7 +10,7 @@ Install libgrss-0.7 runtime and devel packages. The GIR (GObject Introspection) 
 
 Then, from the console, issue the command:
 
-        vapigen --pkg glib-2.0 --pkg libsoup-2.4 --library Grss /usr/share/gir-1.0/Grss-0.7.gir
+	  vapigen --pkg glib-2.0 --pkg libsoup-2.4 --library Grss /usr/share/gir-1.0/Grss-0.7.gir
 
 The resulting VAPI file will be located on the same folder where the shell command was issued, with the name defined on the --library switch, in this case Grss.vapi.
 
