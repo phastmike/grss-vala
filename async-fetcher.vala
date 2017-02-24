@@ -5,7 +5,6 @@ using GLib;
 using Grss;
 
 public class DemoRss : GLib.Object {
-
     public async void get_titles (Grss.FeedChannel feed) {
         try {
             unowned List<FeedItem> items;
@@ -23,11 +22,16 @@ public class DemoRss : GLib.Object {
     }
 
     public static int main (string[] args) {
-        GLib.MainLoop loop;
         var demo = new DemoRss ();
         var loop = new GLib.MainLoop ();
         var feed = new Grss.FeedChannel.with_source ("http://rss.slashdot.org/Slashdot/slashdot");
         demo.get_titles (feed);
+
+        Timeout.add_seconds (3, () => {
+            loop.quit ();
+            return false;
+        });
+
         loop.run ();
         return 0; 
     }
